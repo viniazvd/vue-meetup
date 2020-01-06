@@ -1,32 +1,31 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <c-header></c-header>
+
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import CHeader from './components/CHeader'
+
+export default {
+  name: 'app',
+
+  components: { CHeader }
 }
+</script>
 
-#nav {
-  padding: 30px;
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 </style>
