@@ -6,16 +6,21 @@
       <router-link class="menu-item" to="/">Home</router-link>
       <router-link class="menu-item" to="/about">About</router-link>
     </div>
+
+    <c-sidebar />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 
+import CSidebar from '@/components/CSidebar'
 import MatchMedia from '../mixins/matchMedia'
 
 export default {
   name: 'c-header',
+
+  components: { CSidebar },
 
   mixins: [ MatchMedia ],
 
